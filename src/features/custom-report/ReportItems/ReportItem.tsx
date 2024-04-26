@@ -39,17 +39,19 @@ const ReportItem: FC<ReportItemComponentProps> = ({
   };
   return (
     <>
-      <div className="relative w-[200px] h-[100px] flex items-center justify-center">
+      <div className="relative w-[200px] h-[100px] flex items-center justify-center resize overflow-auto">
         {!isActiveMoveItem && (
           <div className="absolute w-full h-full flex flex-col items-center justify-center z-50 opacity-0 hover:opacity-100 duration-75">
-            <h6 onClick={onMoveMode}>Move</h6>
+            <h6 onMouseDown={onMoveMode}>Move</h6>
             <h6>Edit</h6>
           </div>
         )}
         <div
           className={`${
-            isActiveMoveItem && indexDragItem === indexDropItem  ? "cursor-move" : "cursor-default"
-          } w-full h-full flex relative justify-end`}
+            isActiveMoveItem && indexDragItem === indexDropItem
+              ? "cursor-move"
+              : "cursor-default"
+          } w-full h-full flex relative justify-end `}
           draggable={isActiveMoveItem && indexDragItem === indexDropItem}
           onDragStart={dragItem}
           onDragEnd={dragEnd}
@@ -62,7 +64,7 @@ const ReportItem: FC<ReportItemComponentProps> = ({
               onDragEnter={() => handleSetIndexItemMovingTo(indexDropItem)}
               className="absolute w-full h-full border border-orange-400 bg-white z-0"
             >
-              drop move
+              move to here
             </div>
           )}
           <div

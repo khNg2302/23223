@@ -1,5 +1,5 @@
 import ReportItem from "./ReportItem";
-import { FC } from "react";
+import { FC, memo } from "react";
 import { ReportItemComponentProps } from "@/types/features/custom-report/ReportItems/ReportItem";
 
 const TextItem: FC< Omit<ReportItemComponentProps,'children'>> = (props) => {
@@ -10,4 +10,4 @@ const TextItem: FC< Omit<ReportItemComponentProps,'children'>> = (props) => {
   );
 };
 
-export default TextItem;
+export default memo(TextItem);

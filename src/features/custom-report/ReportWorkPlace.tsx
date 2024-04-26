@@ -10,7 +10,7 @@ const ReportWorkPlace = () => {
   const [isActiveMoveItem, setActiveMoveItem] = useState<boolean>(false);
   const [indexItemMovingTo, setIndexItemMovingTo] = useState<number>(-1)
   const [indexDragItem, setIndexDragItem] = useState<number>(-1)
-  const { getDragData, addItemToDocument, deleteItemFromDocument, ableDrop } =
+  const { getDragData, addItemToDocument, deleteItemFromDocument, ableDrop, moveItem } =
     DropDocument<>({
       handleSetAction: setCustomReport,
     });

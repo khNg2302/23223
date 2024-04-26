@@ -14,6 +14,6 @@ interface DropItemInterface<Data>
   setDragIndexItem: (indexDropItem: number) => void;
 }
 
-type DropItemClass = <Data>(props: DropItemProps) => DropItemInterface<Data>;
+type  DropItemClass = <Data>(props: DropItemProps) => DropItemInterface<Data>;
 
 export type { DropItemClass, DropItemProps };

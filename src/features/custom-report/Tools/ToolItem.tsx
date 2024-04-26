@@ -6,7 +6,7 @@ const ToolItem: FC<ToolItemInterface<>> = ({ children, item, setDragData }) => {
     setDragData(e, item);
   };
   return (
-    <div draggable onDragStart={handleDragStart}>
+    <div className="p-5 border border-transparent hover:border-black duration-75" draggable onDragStart={handleDragStart}>
       {children}
     </div>
   );
